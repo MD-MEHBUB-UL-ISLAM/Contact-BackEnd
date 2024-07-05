@@ -72,3 +72,69 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 "# Contact-BackEnd" 
+
+# Contact Signup Backend
+
+This is a NestJS backend project that provides an API for managing contact signups. It uses PostgreSQL as the database.
+
+## Requirements
+
+- Node.js
+- npm (or yarn)
+- PostgreSQL
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/contact-signup-backend.git
+    cd contact-signup-backend
+    ```
+
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+
+3. Create a `.env` file in the root directory and add your PostgreSQL configuration:
+    ```env
+    DB_HOST=localhost
+    DB_PORT=5432
+    DB_USERNAME=your_db_username
+    DB_PASSWORD=your_db_password
+    DB_NAME=your_db_name
+    ```
+
+4. Run the database migrations (if applicable):
+    ```sh
+    npm run typeorm migration:run
+    ```
+
+5. Start the server:
+    ```sh
+    npm run start
+    ```
+
+6. The server should now be running at `http://localhost:3000`.
+
+## API Endpoints
+
+- `GET /contacts` - Retrieve all contacts
+- `GET /contacts/:id` - Retrieve a contact by ID
+- `POST /contacts` - Create a new contact
+- `DELETE /contacts/:id` - Delete a contact by ID
+
+## Contact Entity
+
+The contact entity includes the following fields:
+- `id` (number) - Primary key
+- `name` (string) - Contact name
+- `address` (string) - Contact address
+- `phone` (string) - Contact phone number
+- `email` (string) - Contact email
+- `hobbies` (string) - Contact hobbies (comma-separated string)
+
+## License
+
+This project is licensed under the MIT License.
+
